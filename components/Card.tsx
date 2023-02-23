@@ -13,14 +13,14 @@ const Card = (props: Props) => {
       {/* compony logo */}
       <motion.div
         initial={{
-          x: -100,
+          y: -50,
         }}
         transition={{
           type: "spring",
           duration: 3,
         }}
         whileInView={{
-          x: 0,
+          y: 0,
         }}
         viewport={{ once: true }}
       >
@@ -32,6 +32,7 @@ const Card = (props: Props) => {
           height={1}
         />
       </motion.div>
+      
 
       <div className="px-0 md:px-10 w-[100%] space-y-2 transition ease-in-out duration-300">
         {/*Job title */}

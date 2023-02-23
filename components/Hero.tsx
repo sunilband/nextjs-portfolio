@@ -44,6 +44,7 @@ const Hero = (props: Props) => {
       >
       <Image
         src={myPic}
+        quality={50}
         alt="Sunil's Pic"
         className="relative rounded-full h-40 w-40 mx-auto object-cover z-20 border-4"
       />
