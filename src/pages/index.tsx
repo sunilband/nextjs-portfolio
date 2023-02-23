@@ -7,7 +7,7 @@ import WorkExperience from 'components/WorkExperience'
 import Skills from 'components/Skills'
 import Projects from 'components/Projects'
 import ContactMe from 'components/ContactMe'
-import Test from 'components/Test'
+
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -51,7 +51,7 @@ export default function Home() {
       <ContactMe/>
       </section>
 
-     
+      
       
     </div> 
   )
