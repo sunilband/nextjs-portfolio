@@ -9,10 +9,10 @@ const Projects = (props: Props) => {
 
   return (
     <div className="h-screen relative overflow-hidden flex flex-col text-left md:flex-row max-w-full justify-evenly mx-auto items-center z-0">
-      <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl">
+      <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl cursor-default ">
         Projects
       </h3>
-      <h3 className="absolute top-36 uppercase tracking-[3px] text-gray-500 text-sm">
+      <h3 className="absolute top-36 uppercase tracking-[3px] text-gray-500 text-sm cursor-default ">
         Swipe to explore
       </h3>
       {/* projects */}
@@ -34,7 +34,7 @@ const Projects = (props: Props) => {
       >
         {projects.map((project, i) => (
           <div
-            className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:p-44 h-screen z-20"
+            className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:p-44 h-screen z-20 "
             key={i}
           >
             <Image
@@ -46,11 +46,11 @@ const Projects = (props: Props) => {
               height={160}
             />
             <div className="space-y-10 px-0 md:px-10 max-w-3xl text-center">
-              <h4 className="text-4xl font-semibold flex flex-col">
+              <h4 className="text-4xl font-semibold flex flex-col cursor-default">
                 Project {i + 1} of {projects.length}:
-                <span className="text-4xl font-semibold">Netflix clone</span>
+                <span className="text-4xl font-semibold cursor-default">Netflix clone</span>
               </h4>
-              <p className="text-lg text-justify">
+              <p className="text-lg text-justify cursor-default">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Laboriosam, cum pariatur! Sed similique atque et reiciendis
                 veniam dolorum architecto molestias.
@@ -61,7 +61,7 @@ const Projects = (props: Props) => {
       </motion.div>
 
       {/* background line */}
-      <div className="w-full absolute top-[30%] bg-[#F7AB0A]/10 left-0 h-[500px] -skew-y-12" />
+      {/* <div className="w-full absolute top-[30%] bg-[#F7AB0A]/10 left-0 h-[500px] -skew-y-12" /> */}
     </div>
   );
 };
