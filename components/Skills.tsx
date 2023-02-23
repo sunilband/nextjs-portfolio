@@ -11,34 +11,27 @@ function Skills({}: Props) {
 
   return (
     <div className="flex relative flex-col text-center md:text-left xl:flex-row max-w-[2000px] xl:px-10 min-h-screen justify-center xl:space-y-0 mx-auto items-center z-0">
-      <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl cursor-default ">
+      <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl">
         Skills
       </h3>
-      <h3 className="absolute top-36 uppercase tracking-[3px] text-gray-500 text-sm cursor-default ">
+      <h3 className="absolute top-36 uppercase tracking-[3px] text-gray-500 text-sm">
         hover for current proficiency{" "}
       </h3>
       <motion.div
         initial={{
-          y:200,
-          x:-200,
-       
+          scale: 0.5,
           
         }}
         whileInView={{
-          y:0,
-          x:0
-          
+          scale: [1.3,1], 
         }}
         transition={{
           type: "spring",
-          duration: 2,
+          duration: 1.5,
         }}
-    
         viewport={{ once: true }}
         className="grid grid-cols-4 gap-4 content-start z-20"
       >
-
-
         <div
           onMouseEnter={() => {
             setSkill("Typescript");
@@ -177,8 +170,7 @@ function Skills({}: Props) {
         </div>
       </motion.div>
 
-     
-      <div className="w-full absolute top-[30%] bg-[#F7AB0A]/10 left-0 h-[500px] skew-y-12 flex items-end justify-start xl:items-start  xl:justify-end " >
+      <div className="w-full absolute top-[30%] bg-[#F7AB0A]/10 left-0 h-[500px] skew-y-12 flex items-end justify-start xl:items-start  xl:justify-end ">
         <h3 className="w-[35vw] h-fit text-xl md:text-[7vh] md:text-5xl text-gray-500/50 uppercase p-4 tracking-[20px]  transition-all ease-in-out duration-150 ">
           {skillName}
         </h3>
