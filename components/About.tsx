@@ -3,6 +3,7 @@ import { motion, useMotionValue, useTransform } from "framer-motion";
 import Image from "next/image";
 import aboutImage from "assets/aboutImage.jpg";
 
+
 type Props = {};
 
 const About = (props: Props) => {
@@ -24,6 +25,7 @@ const About = (props: Props) => {
   }
 
   return (
+    // test
     <div className="w-screen h-screen">
     <motion.div
        initial={{
