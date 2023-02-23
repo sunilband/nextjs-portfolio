@@ -7,6 +7,7 @@ import WorkExperience from 'components/WorkExperience'
 import Skills from 'components/Skills'
 import Projects from 'components/Projects'
 import ContactMe from 'components/ContactMe'
+import Test from 'components/Test'
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -31,24 +32,26 @@ export default function Home() {
       </section>
 
       {/* Experience */}
-      <section id="experience" className='snap-center snap-mandatory snap-always'>
+      <section id="experience" className='snap-start snap-mandatory snap-always'>
         <WorkExperience/>
       </section>
 
       {/* Skills */}
-      <section id="skills" className='snap-center snap-mandatory  snap-always'>
+      <section id="skills" className='snap-start snap-mandatory  snap-always'>
         <Skills/>
       </section>
 
       {/* Projects */}
-      <section id="projects" className='snap-center snap-mandatory  snap-always'>
+      <section id="projects" className='snap-start snap-mandatory  snap-always'>
       <Projects/>
       </section>
       
       {/* Contact Me */}
-      <section id="contact" className='snap-center snap-mandatory  snap-always'>
+      <section id="contact" className='snap-start snap-mandatory  snap-always'>
       <ContactMe/>
       </section>
+
+     
       
     </div> 
   )

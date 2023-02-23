@@ -104,8 +104,8 @@ const About = (props: Props) => {
           viewport={{ once: true }}
           className="space-y-6 px-0 md:px-5"
         >
-          <h4 className="text-xl font-semibold text-[#F7AB0A] sm:text-4xl xl:mt-20">{`Here's Something `}</h4>
-          <p className="text-justify text-sm font-bold leading-6 antialiased sm:text-base sm:font-normal md:max-w-xl md:text-base  md:leading-7 xl:text-xl  xl:leading-8">
+          <h4 className="text-2xl font-semibold text-[#F7AB0A] sm:text-4xl xl:mt-20">{`Here's Something `}</h4>
+          <p className="text-justify text-sm font-bold  antialiased sm:text-base sm:font-normal md:max-w-xl md:text-base  md:leading-7 xl:text-xl  xl:leading-8 pb-4">
             Hey there, this is Sunil. I am a B.Tech(hons) student and a Front
             End Developer with a strong background in HTML, CSS, JavaScript, and
             modern web technologies like React.js, Next.js, Bootstrap and
