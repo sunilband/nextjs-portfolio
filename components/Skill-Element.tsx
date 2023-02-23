@@ -1,5 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 
 
 type Props = {
@@ -28,7 +29,11 @@ const Skill = ({directionLeft,source}: Props) => {
   }}
     viewport={{ once: true }}
     className='group relative flex justify-center items-center my-1 '>
-      <img src={source} className="border border-gray-500 object-cover  h-16 w-16 md:w-20 md:h-20 xl:h-24 xl:w-24 rounded-full  filter group-hover:grayscale transition duration-300 ease-in-out shadow-2xl group-hover:drop-shadow-[0_0px_15px_#F7AB0A]" alt="skill image"/>
+      <Image src={source} className="border border-gray-500 object-cover  h-16 w-16 md:w-20 md:h-20 xl:h-24 xl:w-24 rounded-full  filter group-hover:grayscale transition duration-300 ease-in-out shadow-2xl group-hover:drop-shadow-[0_0px_15px_#F7AB0A]" alt="skill image" 
+      width={100}
+      height={100}
+      priority={true}
+      />
 
       <motion.div 
        initial={{

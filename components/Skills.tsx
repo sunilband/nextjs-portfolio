@@ -20,14 +20,11 @@ function Skills({}: Props) {
       <motion.div
         initial={{
           y:200,
-          x:-200,
-       
-          
+          x:-200,  
         }}
         whileInView={{
           y:0,
-          x:0
-          
+          x:0 
         }}
         transition={{
           type: "spring",
