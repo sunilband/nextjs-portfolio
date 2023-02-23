@@ -21,7 +21,7 @@ const ContactMe = (props: Props) => {
 };
   return (
     <div className="h-screen flex relative flex-col text-center md:text-left md:flex-row  max-w-7xl px-10 justify-evenly mx-auto items-center">
-      <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl">
+      <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl cursor-default">
         Contact
       </h3>
 
@@ -34,14 +34,14 @@ const ContactMe = (props: Props) => {
         }}
         transition={{
           type: "spring",
-          duration: 0.7,
+          duration: 1.5,
         }}
-        //  viewport={{ once: true }}
+         viewport={{ once: true }}
         className="flex flex-col space-y-10 mt-28 "
       >
-        <h4 className="text-2xl md:text-4xl font-semibold text-center ">
+        <h4 className="text-2xl md:text-4xl font-semibold text-center cursor-default">
           I got just what you need.{" "}
-          <span className="text-[#F7AB0A]">Lets Talk</span>
+          <span className="text-[#F7AB0A] cursor-default">Lets Talk</span>
         </h4>
 
         <div className="space-y-3">
