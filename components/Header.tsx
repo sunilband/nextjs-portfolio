@@ -6,7 +6,7 @@ type Props = {}
 
 const Header = (props: Props) => {
   return (
-    <header className='sticky top-0 flex items-start justify-between max-w-7xl mx-auto z-20 xl:items-center p-5'>
+    <header className='sticky top-0 flex items-start justify-between max-w-7xl mx-auto z-40 xl:items-center p-5  '>
         <motion.div
         initial={{
           x:-500,
@@ -22,12 +22,12 @@ const Header = (props: Props) => {
           type: "spring",
           duration:1.5
         }}
-        className='flex flex-row items-center group hover:fill-[#F7AB0A]/40'>
+        className='flex flex-row items-center'>
             {/* Social icons */}
-            <SocialIcon url="https://github.com/sunilband" fgColor='gray' bgColor='transparent'/>
-            <SocialIcon url="https://www.linkedin.com/in/sunil-band" fgColor='gray' bgColor='transparent'/>
-            <SocialIcon url="https://twitter.com/sunillogic" fgColor='gray' bgColor='transparent'/>
-            <SocialIcon url="https://www.instagram.com/chaichopath/" fgColor='gray' bgColor='transparent'/>
+            <SocialIcon url="https://github.com/sunilband" fgColor='currentColor' bgColor='transparent' className=" hover:scale-110 text-[gray] hover:text-[#F7AB0A]/70 transition ease-in-out duration-200"/>
+            <SocialIcon url="https://www.linkedin.com/in/sunil-band" fgColor='currentColor' bgColor='transparent'className=" hover:scale-110 text-[gray] hover:text-[#F7AB0A]/70 transition ease-in-out duration-200"/>
+            <SocialIcon url="https://twitter.com/sunillogic" fgColor='currentColor' bgColor='transparent'className=" hover:scale-110 text-[gray] hover:text-[#F7AB0A]/70 transition ease-in-out duration-200"/>
+            <SocialIcon url="https://www.instagram.com/chaichopath/" fgColor='currentColor' bgColor='transparent'className=" hover:scale-110 text-[gray] hover:text-[#F7AB0A]/70 transition ease-in-out duration-200"/>
         </motion.div>
 
         <motion.div
