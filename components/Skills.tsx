@@ -117,7 +117,7 @@ function Skills({}: Props) {
 
         <div
           onMouseEnter={() => {
-            setSkill("react");
+            setSkill("photoshop");
           }}
           onMouseLeave={() => {
             setSkill("");
@@ -176,7 +176,7 @@ function Skills({}: Props) {
 
      
       <div className="w-full absolute top-[30%] bg-[#F7AB0A]/10 left-0 h-[500px] skew-y-12 flex items-end justify-start xl:items-start  xl:justify-end " >
-        <h3 className="w-[35vw] h-fit text-xl md:text-[7vh] md:text-5xl text-gray-500/50 uppercase p-4 tracking-[20px]  transition-all ease-in-out duration-150 ">
+        <h3 className="w-[35vw] h-fit text-xl md:text-[7vh] md:text-5xl text-gray-500/50 uppercase p-4 pt-11 pb-6 tracking-[20px]  transition-all ease-in-out duration-150 animate-[bounce_2s_ease-in-out_infinite]">
           {skillName}
         </h3>
       </div>

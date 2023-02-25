@@ -61,8 +61,24 @@ const ContactMe = (props: Props) => {
           </div>
         </div>
 
-        <form onSubmit={handleSubmit(Submit)} className="flex flex-col space-y-2 w-fit  mx-auto ">
-          <div className="flex space-x-1 sm:space-x-2 sm:justify-between  ">
+        <form onSubmit={handleSubmit(Submit)} className="flex flex-col  space-y-2 w-fit  mx-auto ">
+          <motion.div
+          initial={{
+            x:-200,
+            opacity:0,
+            
+          }}
+          whileInView={{
+            x:0,
+            opacity:1,
+            
+          }}
+          transition={{
+            type: "spring",
+            duration:2
+          }}
+          viewport={{ once: true }}
+          className="flex space-x-1 sm:space-x-2 sm:justify-between  ">
             <input
               placeholder="Name"
               className="contactInput "
@@ -77,12 +93,60 @@ const ContactMe = (props: Props) => {
               style={{ width: "50%" }}
               {...register('email')}
             />
-          </div>
-          <input placeholder="Subject" className="contactInput" type="text" {...register('subject')}/>
-          <textarea placeholder="Message" className="contactInput" {...register('message')}/>
-          <button className="bg-[#F7AB0A] py-5 px-10 rounded-md text-black font-bold">
+          </motion.div>
+          <motion.input 
+          initial={{
+            x:200,
+            opacity:0,
+            
+          }}
+          whileInView={{
+            x:0,
+            opacity:1,
+            
+          }}
+          transition={{
+            type: "spring",
+            duration:2
+          }}
+          viewport={{ once: true }}
+          placeholder="Subject" className="contactInput" type="text" {...register('subject')}/>
+          <motion.textarea 
+          initial={{
+            x:-200,
+            opacity:0,
+            
+          }}
+          whileInView={{
+            x:0,
+            opacity:1,
+            
+          }}
+          transition={{
+            type: "spring",
+            duration:2
+          }}
+          viewport={{ once: true }}
+          placeholder="Message" className="contactInput" {...register('message')}/>
+          <motion.button 
+          initial={{
+            x:200,
+            opacity:0,
+            
+          }}
+          whileInView={{
+            x:0,
+            opacity:1,
+            
+          }}
+          transition={{
+            type: "spring",
+            duration:2
+          }}
+          viewport={{ once: true }}
+          className="bg-[#F7AB0A] py-5 px-10 rounded-md text-black font-bold transition duration-200  ease-in-out hover:drop-shadow-[0_0px_4px_#F7AB0A]">
             Submit
-          </button>
+          </motion.button>
         </form>
       </motion.div>
     </div>

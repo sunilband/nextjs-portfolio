@@ -7,7 +7,7 @@ type Props = {};
 
 const Card = (props: Props) => {
   return (
-    <article className="group antialiased flex flex-col rounded-lg items-center space-y-7 flex-shrink-0 flex-grow-0 w-[90vw] h-[70vh] sm:w-96 snap-center snap-mandatory p-10 md:p-2 bg-[#292929] opacity-80 hover:opacity-100  transition ease-in-out duration-200 overflow-hidden bottom-0 scale-90 md:w-full/2 hover:scale-[0.92] hover:drop-shadow-xl"
+    <article className="group antialiased flex flex-col rounded-lg items-center space-y-7 flex-shrink-0 flex-grow-0 w-[90vw] h-[70vh] sm:w-96 snap-center p-10 md:p-2 bg-[#292929] opacity-80 hover:opacity-100  transition ease-in-out duration-200 overflow-hidden bottom-0 scale-90 md:w-full/2 hover:scale-[0.92] hover:drop-shadow-xl"
       style={{ height: "100%" }}
     >
       {/* compony logo */}
