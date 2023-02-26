@@ -26,7 +26,7 @@ const About = (props: Props) => {
 
   return (
     // test
-    <div className="w-screen h-screen">
+    <div className="w-screen h-screen ">
     <motion.div
        initial={{
         opacity: 0,

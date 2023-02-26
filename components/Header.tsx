@@ -48,11 +48,11 @@ const Header = (props: Props) => {
           type: "spring",
           duration:2
         }}
-        className='flex flex-row items-center space-x-4 text-gray-400 cursor-pointer self-center px-4'
+        className='flex flex-row items-center space-x-5 text-gray-400 cursor-pointer self-center px-4'
         href="#contact"
         >
           {/* Contact me*/}
-          <div className='w-[1.75rem] fill-[#808080] hover:scale-110 hover:fill-[#F7AB0A]/70 transition ease-in-out duration-200'>
+          <div className='w-[1.68rem] fill-[#808080] hover:scale-110 hover:fill-[#F7AB0A]/70 transition ease-in-out duration-200'>
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z"/></svg>
           </div>
           {/* <SocialIcon className="cursor-pointer" network='email' fgColor='gray' bgColor='transparent' /> */}
