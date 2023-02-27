@@ -7,6 +7,7 @@ import WorkExperience from 'components/WorkExperience'
 import Skills from 'components/Skills'
 import Projects from 'components/Projects'
 import ContactMe from 'components/ContactMe'
+import Test from 'components/Test'
 
 
 
@@ -20,6 +21,10 @@ export default function Home() {
       </Head>
       {/* Header */}
       <Header/>
+
+      {/* <section id="text">
+        <Test/>
+      </section> */}
 
       {/* Hero */}
       <section id="hero" className='snap-start'>
