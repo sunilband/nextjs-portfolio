@@ -1,6 +1,15 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import{useRef, useState } from "react";
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+// import required modules
+import { Pagination, Navigation } from "swiper";
 
 type Props = {};
 
@@ -16,7 +25,7 @@ const Projects = (props: Props) => {
         Swipe to explore
       </h3>
       {/* projects */}
-
+     
       <motion.div
         initial={{
           y: 200,
@@ -32,32 +41,44 @@ const Projects = (props: Props) => {
       
         className="relative w-full flex overflow-y-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar-thin scrollbar-thumb-[#F7AB0A]/80 scrollbar-track-gray-500  scrollbar-thumb-rounded-full scrollbar-track-rounded-full"
       >
+         <Swiper
+        slidesPerView={1}
+        spaceBetween={30}
+        loop={true}
+        pagination={{
+          clickable: true,
+        }}
+        navigation={false}
+        modules={[Pagination]}
+        className="mySwiper"
+      >
+        
         {projects.map((project, i) => (
+          <SwiperSlide key={i}>
           <div
-            className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-end p-20 md:p-44 h-screen z-20 "
-            key={i}
-          >
+            className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center sm:justify-end p-20 md:p-44 h-screen z-20 ">
             <Image
               src="https://www.freepnglogos.com/uploads/netflix-logo-circle-png-5.png"
               priority={true}
               alt=""
-              className="w-40"
+              className="w-56"
               width={160}
               height={160}
             />
             <div className="space-y-10 px-0 md:px-10 max-w-3xl text-center">
               <h4 className="text-4xl font-semibold flex flex-col cursor-default">
-                Project {i + 1} of {projects.length}:
-                <span className="text-4xl font-semibold cursor-default">Netflix clone</span>
+                Netflix clone
               </h4>
               <p className="text-lg text-justify cursor-default">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Laboriosam, cum pariatur! Sed similique atque et reiciendis
-                veniam dolorum architecto molestias.
+                veniam dolorum architecto molestias. Lorem ipsum
               </p>
             </div>
           </div>
+          </SwiperSlide>
         ))}
+      </Swiper>
       </motion.div>
 
       {/* background line */}
