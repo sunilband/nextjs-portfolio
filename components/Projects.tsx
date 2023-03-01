@@ -56,7 +56,7 @@ const Projects = (props: Props) => {
         {projects.map((project, i) => (
           <SwiperSlide key={i}>
           <div
-            className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center sm:justify-end p-20 md:p-44 h-screen z-20 ">
+            className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center sm:justify-center pt-20 md:pt-44 h-screen z-20 ">
             <Image
               src="https://www.freepnglogos.com/uploads/netflix-logo-circle-png-5.png"
               priority={true}
@@ -65,14 +65,14 @@ const Projects = (props: Props) => {
               width={160}
               height={160}
             />
-            <div className="space-y-10 px-0 md:px-10 max-w-3xl text-center">
+            <div className="space-y-10 px-4 md:px-10 max-w-3xl text-center">
               <h4 className="text-4xl font-semibold flex flex-col cursor-default">
                 Netflix clone
               </h4>
               <p className="text-lg text-justify cursor-default">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Laboriosam, cum pariatur! Sed similique atque et reiciendis
-                veniam dolorum architecto molestias. Lorem ipsum
+                veniam dolorum architecto molestias. Lorem ipsum Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, ad Lorem ipsum dolor 
               </p>
             </div>
           </div>
