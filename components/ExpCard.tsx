@@ -5,7 +5,7 @@ import { easeIn, motion } from "framer-motion";
 
 type Props = {};
 
-const Card = (props: Props) => {
+const ExpCard = (props: Props) => {
   return (
     <article className="group antialiased flex flex-col rounded-lg items-center space-y-7 flex-shrink-0 flex-grow-0  h-[75vh] sm:w-96 p-10 md:p-2 bg-[#292929] w-fit"
       style={{ height: "100%" }}
@@ -31,7 +31,7 @@ const Card = (props: Props) => {
         <Image
           src="https://upload.wikimedia.org/wikipedia/commons/archive/5/53/20210618182605%21Google_%22G%22_Logo.svg"
           alt="company logo"
-          className="w-12 h-12 rounded-full xl:w-[50px] xl:h-[50px] object-cover object-center mt-4 group-hover:scale-125 transition ease-in-out duration-300"
+          className="w-12 h-12 rounded-full xl:w-[50px] xl:h-[50px] object-cover object-center mt-4 group-hover:scale-125  transition ease-in-out duration-300"
           width={1}
           height={1}
         />
@@ -87,4 +87,4 @@ const Card = (props: Props) => {
   );
 };
 
-export default Card;
+export default ExpCard;

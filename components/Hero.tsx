@@ -52,7 +52,7 @@ const Hero = (props: Props) => {
       </h2>
       <div className="z-20">
         <h1 className=" text-3xl md:text-5xl lg:text-6xl font-semibold px-10 h-20">
-          <span className="hover:text-[#F7AB0A]/60 transition ease-out duration-200 cursor-default  ">
+          <span className="hover:text-[#F7AB0A]/70 transition ease-out duration-200 cursor-default  ">
             {text}
             <Cursor cursorColor="#F7AB0A" cursorStyle="|" />
           </span>
@@ -61,8 +61,8 @@ const Hero = (props: Props) => {
           <Link href="#about">
             <button className="heroButton">About</button>
           </Link>
-          <Link href="#experience">
-            <button className="heroButton">Experience</button>
+          <Link href="#certifications">
+            <button className="heroButton">certifications</button>
           </Link>
           <Link href="#skills">
             <button className="heroButton">Skills</button>

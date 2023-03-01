@@ -1,6 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import Card from './Card'
+import ExpCard from './ExpCard'
 import { useRef, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -65,7 +65,7 @@ const WorkExperience = (props: Props) => {
           return (
         <div key={i}>
         <SwiperSlide style={{width:"fit-content",backgroundPosition:"center",backgroundSize:"cover"}}>
-          <Card/>
+          <ExpCard/>
         </SwiperSlide>
         </div>)
             

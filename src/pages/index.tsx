@@ -8,6 +8,7 @@ import Skills from 'components/Skills'
 import Projects from 'components/Projects'
 import ContactMe from 'components/ContactMe'
 import Test from 'components/Test'
+import Certifications from 'components/Certifications'
 
 
 
@@ -36,10 +37,15 @@ export default function Home() {
         <About/>
       </section>
 
-      {/* Experience */}
-      <section id="experience" className='snap-start snap-mandatory snap-always'>
-        <WorkExperience/>
+      {/* Certifications */}
+      <section id="certifications" className='snap-start snap-mandatory snap-always'>
+        <Certifications/>
       </section>
+
+      {/* Experience */}
+      {/* <section id="experience" className='snap-start snap-mandatory snap-always'>
+        <WorkExperience/>
+      </section> */}
 
       {/* Skills */}
       <section id="skills" className='snap-start snap-mandatory  snap-always'>
