@@ -39,7 +39,7 @@ const Projects = (props: Props) => {
         }}
         viewport={{ once: true }}
       
-        className="relative w-full flex overflow-y-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar-thin scrollbar-thumb-[#F7AB0A]/80 scrollbar-track-gray-500  scrollbar-thumb-rounded-full scrollbar-track-rounded-full"
+        className="relative w-full flex overflow-y-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar-thin scrollbar-thumb-[#F7AB0A]/80 scrollbar-track-gray-500  scrollbar-thumb-rounded-full scrollbar-track-rounded-full "
       >
          <Swiper
         slidesPerView={1}

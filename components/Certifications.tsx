@@ -17,7 +17,7 @@ type Props = {};
 
 const Certifications = (props: Props) => {
   return (
-    <div className="h-screen w-screen flex relative flex-col text-left md:flex-row max-w-full justify-evenly mx-auto items-center z-20 pb-2">
+    <div className="h-screen w-screen flex relative flex-col text-left md:flex-row max-w-full justify-evenly mx-auto items-center z-20 pb-2 ">
       <h3 className="absolute top-24 uppercase tracking-[12px]  sm:tracking-[20px] text-gray-500 text-2xl cursor-default ">
         Certifications
       </h3>
