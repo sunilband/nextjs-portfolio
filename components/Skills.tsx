@@ -116,7 +116,7 @@ function Skills({}: Props) {
         >
           {/* tailwind */}
           <Skill
-            source="https://scontent.fpnq15-1.fna.fbcdn.net/v/t39.30808-6/299463877_560030875914611_8025210373789510385_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=gXR6Iowl4K0AX8ZKyWr&_nc_ht=scontent.fpnq15-1.fna&oh=00_AfD72Q8ec6S9Ev7tsJUC5mo_RwZZau6jYgv07500FHohow&oe=64048D37"
+            source="https://i.ibb.co/16HVtsp/tailwind.jpg"
             proficiency={80}
           />
         </div>
@@ -217,7 +217,7 @@ function Skills({}: Props) {
         >
           {/* Node.js */}
           <Skill
-            source="https://w7.pngwing.com/pngs/780/57/png-transparent-node-js-javascript-database-mongodb-native-miscellaneous-text-trademark.png"
+            source="https://i.ibb.co/m6vX0d8/nodejs.png"
             proficiency={60}
           />
         </div>
@@ -231,7 +231,7 @@ function Skills({}: Props) {
         >
           {/* express.js */}
           <Skill
-            source="https://w7.pngwing.com/pngs/925/447/png-transparent-express-js-node-js-javascript-mongodb-node-js-text-trademark-logo.png"
+            source="https://i.ibb.co/dLZjV9g/express.png"
             proficiency={60}
           />
         </div>
