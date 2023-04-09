@@ -103,16 +103,16 @@ const About = (props: Props) => {
         >
           <h4 className="text-2xl font-semibold text-[#F7AB0A] sm:text-4xl xl:mt-20">{`Here's Something `}</h4>
           <p className="text-justify text-sm font-bold  antialiased sm:text-base sm:font-normal md:max-w-xl md:text-base  md:leading-7 xl:text-xl  xl:leading-8 pb-4">
-            Hello there! I'm your friendly neighborhood MERN developer, about to
+           Hello there! I&apos;m your friendly neighborhood MERN developer, about to
             graduate and take the tech world by storm! My love for coding runs
             as deep as my love for chai, and I can promise you that I work just
             as hard as I do when devouring a piping hot slice of pizza. In my
-            spare time, you'll find me tinkering away on side projects, trying
-            to push the limits of what's possible with the latest tech trends.
-            I'm always up for a good challenge, whether it's debugging a pesky
+            spare time, you&apos;ll find me tinkering away on side projects, trying
+            to push the limits of what&apos;s possible with the latest tech trends.
+            I&apos;m always up for a good challenge, whether it&apos;s debugging a pesky
             line of code or figuring out how to integrate the latest APIs. So,
-            if you're in need of a quirky, fun-loving, full-stack MERN
-            developer, look no further! I'm ready to roll up my sleeves and get
+            if you&apos;re in need of a quirky, fun-loving, full-stack MERN
+            developer, look no further! I&apos;m ready to roll up my sleeves and get
             coding!
           </p>
         </motion.div>
