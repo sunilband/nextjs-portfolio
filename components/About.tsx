@@ -3,7 +3,6 @@ import { motion, useMotionValue, useTransform } from "framer-motion";
 import Image from "next/image";
 import aboutImage from "assets/aboutImage.jpg";
 
-
 type Props = {};
 
 const About = (props: Props) => {
@@ -27,27 +26,26 @@ const About = (props: Props) => {
   return (
     // test
     <div className="w-screen h-screen ">
-    <motion.div
-       initial={{
-        opacity: 0,
-      }}
-      whileInView={{
-        opacity: 1,
-        scale: [0.5, 1.1, 1],
-      }}
-      transition={{
-        type: "spring",
-        duration: 1.5,
-      }}
-      viewport={{ once: true }}
-      className="flex flex-col relative h-screen text-center md:text-left md:flex-row  px-10 justify-evenly mx-auto items-center z-20"
-    >
-      <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl ">
-        About
-      </h3>
-
-     
       <motion.div
+        initial={{
+          opacity: 0,
+        }}
+        whileInView={{
+          opacity: 1,
+          scale: [0.5, 1.1, 1],
+        }}
+        transition={{
+          type: "spring",
+          duration: 1.5,
+        }}
+        viewport={{ once: true }}
+        className="flex flex-col relative h-screen text-center md:text-left md:flex-row  px-10 justify-evenly mx-auto items-center z-20"
+      >
+        <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl ">
+          About
+        </h3>
+
+        <motion.div
           initial={{
             y: -200,
             opacity: 0,
@@ -105,17 +103,20 @@ const About = (props: Props) => {
         >
           <h4 className="text-2xl font-semibold text-[#F7AB0A] sm:text-4xl xl:mt-20">{`Here's Something `}</h4>
           <p className="text-justify text-sm font-bold  antialiased sm:text-base sm:font-normal md:max-w-xl md:text-base  md:leading-7 xl:text-xl  xl:leading-8 pb-4">
-            Hey there, this is Sunil. I am a B.Tech(hons) student and a Front
-            End Developer with a strong background in HTML, CSS, JavaScript, and
-            modern web technologies like React.js, Next.js, Bootstrap and
-            Tailwind CSS. I have a keen eye for detail and a focus on delivering
-            exceptional user experiences. {`I'm`} passionate about creating
-            visually stunning and intuitive web experiences. I am a lifelong
-            learner, constantly seeking new challenges and opportunities to grow
-            as a developer.
+            Hello there! I'm your friendly neighborhood MERN developer, about to
+            graduate and take the tech world by storm! My love for coding runs
+            as deep as my love for chai, and I can promise you that I work just
+            as hard as I do when devouring a piping hot slice of pizza. In my
+            spare time, you'll find me tinkering away on side projects, trying
+            to push the limits of what's possible with the latest tech trends.
+            I'm always up for a good challenge, whether it's debugging a pesky
+            line of code or figuring out how to integrate the latest APIs. So,
+            if you're in need of a quirky, fun-loving, full-stack MERN
+            developer, look no further! I'm ready to roll up my sleeves and get
+            coding!
           </p>
         </motion.div>
-    </motion.div>
+      </motion.div>
     </div>
   );
 };

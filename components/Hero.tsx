@@ -13,7 +13,7 @@ const Hero = (props: Props) => {
   const [text] = useTypewriter({
     words: [
       "Hey this is Sunil!",
-      "frontEndDeveloper.tsx",
+      "fullStackDeveloper.tsx",
       "Hobbyist-Photographer.jpeg",
       "<ChaiLover/> ",
     ],

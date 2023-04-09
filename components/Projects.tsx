@@ -1,7 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import{useRef, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
@@ -10,6 +9,9 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 // import required modules
 import { Pagination, Navigation } from "swiper";
+import spiritualgpt from "assets/spiritualgpt.png"
+import portfolio from "assets/portfolio.png"
+import newsbirdie from "assets/newsbirdie.png"
 
 type Props = {};
 
@@ -53,31 +55,79 @@ const Projects = (props: Props) => {
         className="mySwiper"
       >
         
-        {projects.map((project, i) => (
-          <SwiperSlide key={i}>
+         
+          <SwiperSlide >
+          <a href="https://spiritualgpt.vercel.app/" target="_blank" rel="noreferrer">
           <div
             className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center sm:justify-center pt-20 md:pt-44 h-screen z-20 ">
             <Image
-              src="https://www.freepnglogos.com/uploads/netflix-logo-circle-png-5.png"
+              src={spiritualgpt}
               priority={true}
               alt=""
-              className="w-56"
-              width={160}
-              height={160}
+              className="w-96"
+              quality={100}
             />
             <div className="space-y-10 px-4 md:px-10 max-w-3xl text-center">
               <h4 className="text-4xl font-semibold flex flex-col cursor-default">
-                Netflix clone
+                Spiritual GPT
               </h4>
               <p className="text-lg text-justify cursor-default">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Laboriosam, cum pariatur! Sed similique atque et reiciendis
-                veniam dolorum architecto molestias. Lorem ipsum Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, ad Lorem ipsum dolor 
+              Spiritual GPT is an AI chatbot designed to provide spiritual guidance and knowledge.
+    It recognizes religious and spiritual queries and generates relevant responses from various religious scriptures using OpenAI GPT-3.5-turbo.
+Supports 8 scriptures including Bhagwad Geeta ,Holy Quran,Guru Granth Sahib and more with 14 languages.
               </p>
             </div>
           </div>
+          </a>
           </SwiperSlide>
-        ))}
+          
+
+          <SwiperSlide >
+          <a href="https://sunilband.netlify.com/" target="_blank" rel="noreferrer">
+          <div
+            className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center sm:justify-center pt-20 md:pt-44 h-screen z-20 ">
+            <Image
+              src={portfolio}
+              priority={true}
+              alt=""
+              className="w-96"
+              quality={100}
+            />
+            <div className="space-y-10 px-4 md:px-10 max-w-3xl text-center">
+              <h4 className="text-4xl font-semibold flex flex-col cursor-default">
+                Portfolio Website
+              </h4>
+              <p className="text-lg text-justify cursor-default">
+              My developer portfolio made with beautiful and responsive UI with flowing animations with intention to demonstrate my potential as a candidate for various opportunities and to showcase my strengths and capabilities to potential employers or collaborators.
+              </p>
+            </div>
+          </div>
+          </a>
+          </SwiperSlide>
+
+          <SwiperSlide >
+          <a href="https://github.com/sunilband/News_birdie" target="_blank" rel="noreferrer">
+          <div
+            className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center sm:justify-center pt-20 md:pt-44 h-screen z-20 ">
+            <Image
+              src={newsbirdie}
+              priority={true}
+              alt=""
+              className="w-96"
+              quality={100}
+            />
+            <div className="space-y-10 px-4 md:px-10 max-w-3xl text-center">
+              <h4 className="text-4xl font-semibold flex flex-col cursor-default">
+                News Birdie
+              </h4>
+              <p className="text-lg text-justify cursor-default">
+              News app that provide users with accurate and up‑to‑date news from around the world.Utilizes NewsAPI integration get the latest news.Country wise news options with live news sync.Easy‑to‑use interface and offers a personalized news feed to keep users informed about the latest happenings in the world.
+              </p>
+            </div>
+          </div>
+          </a>
+          </SwiperSlide>
+       
       </Swiper>
       </motion.div>
 

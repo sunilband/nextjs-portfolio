@@ -22,6 +22,19 @@ export const data = [
     learnPoints: ["UX", "UI", "Design Fundamentals"],
   },
   {
+    name: "Developing Back-End Apps with Node.js and Express",
+    link: "https://www.coursera.org/account/accomplishments/certificate/R2WGLBLNYL5X",
+    provider: "Coursera",
+    offeredBy: "IBM",
+    logo: "https://www.buyalicence.com/wp-content/uploads/2019/03/ibm-logo-circular-grey.png",
+    status: "Completed",
+    learnPoints: [
+      "back-end development",
+      "Server-side JavaScript",
+      "RESTful API",
+    ],
+  },
+  {
     name: "JavaScript Algorithms and Data Structures",
     link: "https://www.freecodecamp.org/certification/fcc11e5227f-5153-468c-9cd6-5b245694882a/javascript-algorithms-and-data-structures",
     provider: "FreeCodeCamp",
@@ -154,4 +167,5 @@ export const data = [
       "OOP",
     ],
   },
+  
 ];
