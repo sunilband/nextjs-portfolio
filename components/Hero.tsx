@@ -54,7 +54,7 @@ const Hero = (props: Props) => {
         src={props.data.heroImage}
         width={400}
         height={400}
-        priority
+        priority={true}
         alt="Sunil's Pic"
         className="relative rounded-full h-40 w-40 mx-auto object-cover z-20 border-4"
       />
