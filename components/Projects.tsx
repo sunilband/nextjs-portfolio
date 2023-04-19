@@ -56,7 +56,7 @@ const Projects = (props: Props) => {
         
          {props.data.projectsData.map((item:any,key:any)=>{
           return<SwiperSlide key={key}>
-          <a href="https://spiritualgpt.vercel.app/" target="_blank" rel="noreferrer">
+          <a href={item.projectLink} target="_blank" rel="noreferrer">
           <div
             className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center sm:justify-center pt-20 md:pt-44 h-screen z-20 ">
             <Image
