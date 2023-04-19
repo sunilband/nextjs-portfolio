@@ -1,4 +1,5 @@
 import React from "react";
+import {useState,useEffect} from "react"
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 import BackgroundCircles from "./BackgroundCircles";
 import Image from "next/image";
@@ -6,17 +7,24 @@ import myPic from "../assets/mugshot.jpeg";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
-type Props = {};
+
+type Props = {
+ data:any
+};
 
 const Hero = (props: Props) => {
-  // typewriter
+
+  
+ 
   const [text] = useTypewriter({
-    words: [
-      "Hey this is Sunil!",
-      "fullStackDeveloper.tsx",
-      "Hobbyist-Photographer.jpeg",
-      "<ChaiLover/> ",
-    ],
+    // words: [
+    //   "Hey this is Sunil!",
+    //   "fullStackDeveloper.tsx",
+    //   "Hobbyist-Photographer.jpeg",
+    //   "<ChaiLover/> ",
+    // ],
+    words:props.data.typewriter,
+    // words: heroData.typewriter,
     loop: true,
     delaySpeed: 2000,
     typeSpeed: 100,
@@ -43,18 +51,21 @@ const Hero = (props: Props) => {
       className="z-20 flex flex-col space-y-4"
       >
       <Image
-        src={myPic}
+        src={props.data.heroImage}
+        width={400}
+        height={400}
+        priority
         alt="Sunil's Pic"
         className="relative rounded-full h-40 w-40 mx-auto object-cover z-20 border-4"
       />
       <h2 className="text-sm uppercase text-gray-500 pb-2 tracking-[15px] z-20 cursor-default ">
-        Computer engineer
+        {props.data.title}
       </h2>
       <div className="z-20">
         <h1 className=" text-3xl md:text-5xl lg:text-6xl font-semibold px-10 h-20">
           <span className="hover:text-[#F7AB0A]/70 transition ease-out duration-200 cursor-default  ">
-            {text}
-            <Cursor cursorColor="#F7AB0A" cursorStyle="|" />
+                {text}
+                <Cursor cursorColor="#F7AB0A" cursorStyle="|" /> 
           </span>
         </h1>
         <div className="pt-5">

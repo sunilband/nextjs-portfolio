@@ -1,11 +1,18 @@
 import React from "react";
 import { motion, useMotionValue, useTransform } from "framer-motion";
 import Image from "next/image";
-import aboutImage from "assets/aboutImage.jpg";
 
-type Props = {};
+
+
+
+type Props = {
+data:any
+};
 
 const About = (props: Props) => {
+  
+
+ 
   const x = useMotionValue(100);
   const y = useMotionValue(100);
 
@@ -77,7 +84,10 @@ const About = (props: Props) => {
               className="mt-28 flex h-60 w-64 items-start justify-center md:h-96 md:w-96"
             >
               <Image
-                src={aboutImage}
+                // src={apiData[0].aboutImage==undefined?"":apiData[0].aboutImage}
+                src={props.data.aboutImage}
+                width={1000}
+                height={1000}
                 priority={true}
                 alt="Sunil's about image"
                 className="-mb-10 h-64 w-64 flex-shrink-0 rounded-full object-cover text-[#ffffff5d] transition duration-700  ease-in-out hover:scale-125 hover:drop-shadow-[0_0px_35px_#ffffff2f] md:mb-0 md:h-96 md:w-96 md:rounded-lg xl:scale-110"
@@ -103,17 +113,7 @@ const About = (props: Props) => {
         >
           <h4 className="text-2xl font-semibold text-[#F7AB0A] sm:text-4xl xl:mt-20">{`Here's Something `}</h4>
           <p className="text-justify text-sm font-bold  antialiased sm:text-base sm:font-normal md:max-w-xl md:text-base  md:leading-7 xl:text-xl  xl:leading-8 pb-4">
-           Hello there! I&apos;m your friendly neighborhood MERN developer, about to
-            graduate and take the tech world by storm! My love for coding runs
-            as deep as my love for chai, and I can promise you that I work just
-            as hard as I do when devouring a piping hot slice of pizza. In my
-            spare time, you&apos;ll find me tinkering away on side projects, trying
-            to push the limits of what&apos;s possible with the latest tech trends.
-            I&apos;m always up for a good challenge, whether it&apos;s debugging a pesky
-            line of code or figuring out how to integrate the latest APIs. So,
-            if you&apos;re in need of a quirky, fun-loving, full-stack MERN
-            developer, look no further! I&apos;m ready to roll up my sleeves and get
-            coding!
+            {props.data.aboutText}
           </p>
         </motion.div>
       </motion.div>

@@ -1,5 +1,4 @@
 import React from "react";
-import { motion } from "framer-motion";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -11,9 +10,11 @@ import "swiper/css/pagination";
 // import required modules
 import { EffectCoverflow, Pagination, EffectCards } from "swiper";
 import CertCard from "./CertCard";
-import { data } from "./CertData";
 
-type Props = {};
+
+type Props = {
+  data:any
+};
 
 const Certifications = (props: Props) => {
   return (
@@ -46,7 +47,7 @@ const Certifications = (props: Props) => {
           style={{ paddingTop: "10px", paddingBottom: "35px" }}
         >
           {/* Swiper items */}
-          {data.map((item: any, i: number) => {
+          {props.data.certData.map((item: any, i: number) => {
             return (
               <SwiperSlide
                 style={{
