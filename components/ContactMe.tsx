@@ -1,7 +1,8 @@
-import React from "react";
+import React,{useRef} from "react";
 import { PhoneIcon, MapPinIcon, EnvelopeIcon } from "@heroicons/react/24/solid";
 import { motion } from "framer-motion";
 import { useForm, SubmitHandler } from "react-hook-form";
+import emailjs from '@emailjs/browser';
 
 type Props = {};
 type Inputs = {
@@ -12,12 +13,18 @@ type Inputs = {
 };
 
 const ContactMe = (props: Props) => {
-  const { register, handleSubmit} = useForm<Inputs>();
-  const Submit: SubmitHandler<Inputs> = formData =>{ 
-    console.log(formData)
-    window.location.href=`mailto:sunilbandwork@gmail?subject=${formData.subject}&body=Hi,my name is ${formData.name}. ${formData.message} (${formData.email})`
   
-};
+  const form:any = useRef();
+  const sendEmail = (e:any) => {
+    e.preventDefault();
+    emailjs.sendForm('portfolio', 'template_0xdiby9', form.current, 'LJ2tmRAE4H8BfsKr4')
+      .then((result) => {
+          alert("Email Sent Successfully");
+      }, (error) => {
+          alert("Something went wrong");
+      });
+  };
+
   return (
     <div className="h-screen flex relative flex-col text-center md:text-left md:flex-row  max-w-7xl px-10 justify-evenly mx-auto items-center">
       <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl cursor-default">
@@ -43,7 +50,7 @@ const ContactMe = (props: Props) => {
           <span className="text-[#F7AB0A] cursor-default">Lets Talk</span>
         </h4>
 
-        <div className="space-y-3">
+        <div className="space-y-3 ">
           <div className="flex items-center space-x-5 justify-center">
             <PhoneIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
             <p className="text-2xl">+918390685016</p>
@@ -51,7 +58,7 @@ const ContactMe = (props: Props) => {
 
           <div className="flex items-center space-x-5 justify-center">
             <MapPinIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
-            <p className="text-2xl">wagholi</p>
+            <p className="text-2xl">Pune</p>
           </div>
 
           <div className="flex items-center space-x-5 justify-center">
@@ -60,7 +67,7 @@ const ContactMe = (props: Props) => {
           </div>
         </div>
 
-        <form onSubmit={handleSubmit(Submit)} className="flex flex-col  space-y-2 w-fit  mx-auto ">
+        <form ref={form} onSubmit={sendEmail} className="flex flex-col  space-y-2 w-fit  mx-auto " >
           <motion.div
           initial={{
             x:-200,
@@ -83,14 +90,16 @@ const ContactMe = (props: Props) => {
               className="contactInput "
               type="text"
               style={{ width: "50%" }}
-              {...register('name')}
+              name="name"
+              required
             />
             <input
               placeholder="Email"
               className="contactInput "
               type="email"
               style={{ width: "50%" }}
-              {...register('email')}
+              name="email"
+              required
             />
           </motion.div>
           <motion.input 
@@ -109,7 +118,7 @@ const ContactMe = (props: Props) => {
             duration:2
           }}
           viewport={{ once: true }}
-          placeholder="Subject" className="contactInput" type="text" {...register('subject')}/>
+          placeholder="Subject" className="contactInput" type="text" name="subject" required/>
           <motion.textarea 
           initial={{
             x:-200,
@@ -126,7 +135,7 @@ const ContactMe = (props: Props) => {
             duration:2
           }}
           viewport={{ once: true }}
-          placeholder="Message" className="contactInput" {...register('message')}/>
+          placeholder="Message" className="contactInput" name="message" required/>
           <motion.button 
           initial={{
             x:200,
@@ -143,6 +152,7 @@ const ContactMe = (props: Props) => {
             duration:2
           }}
           viewport={{ once: true }}
+          type="submit"
           className="bg-[#F7AB0A] py-5 px-10 rounded-md text-black font-bold transition duration-200  ease-in-out hover:drop-shadow-[0_0px_4px_#F7AB0A]">
             Submit
           </motion.button>
@@ -151,5 +161,8 @@ const ContactMe = (props: Props) => {
     </div>
   );
 };
+
+  
+
 
 export default ContactMe;
