@@ -1,16 +1,9 @@
 import React,{useRef} from "react";
 import { PhoneIcon, MapPinIcon, EnvelopeIcon } from "@heroicons/react/24/solid";
 import { motion } from "framer-motion";
-import { useForm, SubmitHandler } from "react-hook-form";
 import emailjs from '@emailjs/browser';
 
 type Props = {};
-type Inputs = {
-  name: string,
-  email: string,
-  subject:string,
-  message:string
-};
 
 const ContactMe = (props: Props) => {
   
