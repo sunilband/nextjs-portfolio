@@ -66,6 +66,7 @@ const Certifications = (props: Props) => {
                   status={item.status}
                   learnPoints={item.learnPoints}
                 />
+                
               </SwiperSlide>
             );
           })}

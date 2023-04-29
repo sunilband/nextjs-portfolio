@@ -27,10 +27,10 @@ const Header = (props: Props) => {
         }}
         className='flex flex-row items-center'>
             {/* Social icons */}
-            <SocialIcon url={props.data.github} fgColor='currentColor' bgColor='transparent' className=" hover:scale-110 text-[gray] hover:text-[#F7AB0A]/70 transition ease-in-out duration-200" target="_blank" rel="noreferrer"/>
-            <SocialIcon url={props.data.linkedin} fgColor='currentColor' bgColor='transparent'className=" hover:scale-110 text-[gray] hover:text-[#F7AB0A]/70 transition ease-in-out duration-200" target="_blank" rel="noreferrer"/>
-            <SocialIcon url={props.data.twitter} fgColor='currentColor' bgColor='transparent'className=" hover:scale-110 text-[gray] hover:text-[#F7AB0A]/70 transition ease-in-out duration-200" target="_blank" rel="noreferrer"/>
-            <SocialIcon url={props.data.instagram} fgColor='currentColor' bgColor='transparent'className=" hover:scale-110 text-[gray] hover:text-[#F7AB0A]/70 transition ease-in-out duration-200" target="_blank" rel="noreferrer"/>
+            <SocialIcon url={props.data.github} fgColor='currentColor' bgColor='transparent' className=" hover:scale-110 text-[gray] hover:text-[#F7AB0A]/70 transition ease-in-out duration-100" target="_blank" rel="noreferrer"/>
+            <SocialIcon url={props.data.linkedin} fgColor='currentColor' bgColor='transparent'className=" hover:scale-110 text-[gray] hover:text-[#F7AB0A]/70 transition ease-in-out duration-100" target="_blank" rel="noreferrer"/>
+            <SocialIcon url={props.data.twitter} fgColor='currentColor' bgColor='transparent'className=" hover:scale-110 text-[gray] hover:text-[#F7AB0A]/70 transition ease-in-out duration-100" target="_blank" rel="noreferrer"/>
+            <SocialIcon url={props.data.instagram} fgColor='currentColor' bgColor='transparent'className=" hover:scale-110 text-[gray] hover:text-[#F7AB0A]/70 transition ease-in-out duration-100" target="_blank" rel="noreferrer"/>
         </motion.div>
         
         

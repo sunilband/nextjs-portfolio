@@ -63,13 +63,13 @@ const Projects = (props: Props) => {
               src={item.projectImage}
               priority={true}
               alt=""
-              className="w-96"
+              className="w-96 hover:scale-110 transition-all ease-in-out hover:drop-shadow-2xl "
               width={400}
               height={400}
               quality={100}
             />
             <div className="space-y-10 px-4 md:px-10 max-w-3xl text-center">
-              <h4 className="text-4xl font-semibold flex flex-col cursor-default">
+              <h4 className="text-4xl font-semibold tracking-wide flex flex-col cursor-default text-[#F7AB0A]">
                 {item.projectName}
               </h4>
               <p className="text-lg text-justify cursor-default">

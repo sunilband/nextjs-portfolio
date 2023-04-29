@@ -46,7 +46,7 @@ const About = (props: Props) => {
           duration: 1.5,
         }}
         viewport={{ once: true }}
-        className="flex flex-col relative h-screen text-center md:text-left md:flex-row  px-10 justify-evenly mx-auto items-center z-20"
+        className="flex flex-col relative h-screen text-center md:text-left md:flex-row  px-10 justify-center gap-20 mx-auto items-center z-20 "
       >
         <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl ">
           About
@@ -84,13 +84,13 @@ const About = (props: Props) => {
               className="mt-28 flex h-60 w-64 items-start justify-center md:h-96 md:w-96"
             >
               <Image
-                // src={apiData[0].aboutImage==undefined?"":apiData[0].aboutImage}
+  
                 src={props.data.aboutImage}
-                width={1000}
-                height={1000}
+                width={2000}
+                height={2000}
                 priority={true}
                 alt="Sunil's about image"
-                className="-mb-10 h-64 w-64 flex-shrink-0 rounded-full object-cover text-[#ffffff5d] transition duration-700  ease-in-out hover:scale-125 hover:drop-shadow-[0_0px_35px_#ffffff2f] md:mb-0 md:h-96 md:w-96 md:rounded-lg xl:scale-110"
+                className="-mb-10 h-64 w-64 sm:drop-shadow-[0_0px_20px_#ffffff0f] flex-shrink-0 rounded-full object-cover text-[#ffffff5d] transition duration-700  ease-in-out hover:scale-125 hover:drop-shadow-[0_0px_35px_#ffffff2f] md:mb-0 md:h-96 md:w-96 md:rounded-lg xl:scale-110"
               />
             </motion.div>
           </motion.div>
@@ -109,11 +109,11 @@ const About = (props: Props) => {
             duration: 2,
           }}
           viewport={{ once: true }}
-          className="space-y-6 px-0 md:px-5"
+          className="space-y-6 px-0 md:px-3 flex items-center "
         >
-          <h4 className="text-2xl font-semibold text-[#F7AB0A] sm:text-4xl xl:mt-20">{`Here's Something `}</h4>
-          <p className="text-justify text-sm font-bold  antialiased sm:text-base sm:font-normal md:max-w-xl md:text-base  md:leading-7 xl:text-xl  xl:leading-8 pb-4">
-            {props.data.aboutText}
+          {/* <h4 className="text-2xl font-semibold text-[#F7AB0A] sm:text-4xl xl:mt-20">{`Here's Something `}</h4> */}
+          <p className="text-justify text-sm font-bold  antialiased sm:text-base sm:font-normal md:max-w-xl md:text-base  md:leading-7 xl:text-xl  xl:leading-8 pb-4 sm:mt-32">
+            {props.data.aboutText.split(" ").map((x:any,key:any)=>{return<span className="hover:text-[#F7AB0A] transition-all ease-in-out hover:scale-105" key={key}>{x} </span>})}
           </p>
         </motion.div>
       </motion.div>
