@@ -8,7 +8,8 @@ import Projects from "components/Projects";
 import ContactMe from "components/ContactMe";
 import Certifications from "components/Certifications";
 import axios from "axios";
-import React, { useEffect, useState } from "react";
+import React from "react";
+import SkillsSection from "components/SkillsSection/SkillsSection";
 // import { InfinitySpin } from "react-loader-spinner";
 
 
@@ -66,11 +67,19 @@ export default function Home(props: Props) {
     </section>
 
     {/* Skills */}
-    <section
+    {/* <section
       id="skills"
       className="snap-start snap-mandatory  snap-always"
     >
       <Skills data={props.data[3]} />
+    </section> */}
+
+    {/* Skills 2 */}
+    <section
+      id="skills"
+      className="snap-start snap-mandatory  snap-always"
+    >
+      <SkillsSection data={props.data[3]}/>
     </section>
 
     {/* Projects */}
