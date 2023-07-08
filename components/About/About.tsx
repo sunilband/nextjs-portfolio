@@ -1,7 +1,6 @@
 import React from "react";
 import { motion, useMotionValue, useTransform } from "framer-motion";
 import Image from "next/image";
-import classes from "./About.module.css";
 import quote from "./quote.svg";
 
 type Props = {
@@ -62,7 +61,7 @@ const About = (props: Props) => {
                 rotateX: rotateX,
                 rotateY: rotateY,
               }}
-              className="mt-28 flex h-60 w-64 items-start justify-center md:h-96 md:w-96"
+              className="mt-28 flex h-60 w-64 items-start justify-center md:h-96 md:w-96 relative"
             >
               <Image
                 src={props.data.aboutImage}
@@ -72,6 +71,18 @@ const About = (props: Props) => {
                 quality={100}
                 alt="Sunil's about image"
                 className="-mb-10 h-64 w-64 sm:drop-shadow-[0_0px_20px_#ffffff0f] flex-shrink-0 rounded-full object-cover text-[#ffffff5d] transition duration-700  ease-in-out hover:scale-125 hover:drop-shadow-[0_0px_35px_#ffffff2f] md:mb-0 md:h-96 md:w-96 md:rounded-lg xl:scale-110"
+              />
+
+              
+              {/* hover image */}
+              <Image
+                src={props.data.aboutHoverImage}
+                width={2464}
+                height={2464}
+                priority={true}
+                quality={100}
+                alt="Sunil's about image"
+                className="absolute -mb-10 h-64 w-64 sm:drop-shadow-[0_0px_20px_#ffffff0f] flex-shrink-0 rounded-full object-cover text-[#ffffff5d] transition duration-700  ease-in-out hover:scale-125 hover:drop-shadow-[0_0px_35px_#ffffff2f] md:mb-0 md:h-96 md:w-96 md:rounded-lg xl:scale-110"
               />
             </motion.div>
           </motion.div>
