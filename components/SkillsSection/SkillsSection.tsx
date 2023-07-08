@@ -91,7 +91,7 @@ function Skills(props: Props) {
                     className="normal rounded-lg overflow-hidden antialiased"
                     href="#"
                   >
-                    <Image src={item.imageLink} alt="image" fill />
+                    <Image src={item.imageLink} alt="skillImage" fill />
                   </a>
                   <div className="info antialiased flex justify-center items-center">
                     <h3>{item.proficiency}</h3>

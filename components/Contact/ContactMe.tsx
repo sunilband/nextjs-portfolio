@@ -63,13 +63,12 @@ const ContactMe = (props: Props) => {
         >
           <motion.div
             initial={{
-              x: -200,
+              x: -100,
             }}
             whileInView={{
               x: 0,
             }}
             transition={{
-              type: "spring",
               duration: 1,
             }}
             className="flex space-x-1 sm:space-x-2 sm:justify-between  "
@@ -93,7 +92,7 @@ const ContactMe = (props: Props) => {
           </motion.div>
           <motion.input
             initial={{
-              x: 200,
+              x: 100,
               opacity: 0,
             }}
             whileInView={{
@@ -101,10 +100,8 @@ const ContactMe = (props: Props) => {
               opacity: 1,
             }}
             transition={{
-              type: "spring",
-              duration: 2,
+              duration: 1,
             }}
-            viewport={{ once: true }}
             placeholder="Subject"
             className="contactInput"
             type="text"
@@ -113,7 +110,7 @@ const ContactMe = (props: Props) => {
           />
           <motion.textarea
             initial={{
-              x: -200,
+              x: -100,
               opacity: 0,
             }}
             whileInView={{
@@ -121,10 +118,8 @@ const ContactMe = (props: Props) => {
               opacity: 1,
             }}
             transition={{
-              type: "spring",
-              duration: 2,
+              duration: 1,
             }}
-            viewport={{ once: true }}
             placeholder="Message"
             className="contactInput"
             name="message"
@@ -132,7 +127,7 @@ const ContactMe = (props: Props) => {
           />
           <motion.button
             initial={{
-              x: 200,
+              x: 100,
               opacity: 0,
             }}
             whileInView={{
@@ -140,10 +135,8 @@ const ContactMe = (props: Props) => {
               opacity: 1,
             }}
             transition={{
-              type: "spring",
-              duration: 2,
+              duration: 1,
             }}
-            viewport={{ once: true }}
             type="submit"
             className="bg-[#F7AB0A] py-5 px-10 rounded-md text-black font-bold transition duration-200  ease-in-out hover:drop-shadow-[0_0px_4px_#F7AB0A]"
           >
