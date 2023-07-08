@@ -65,30 +65,29 @@ const About = (props: Props) => {
             >
               <Image
                 src={props.data.aboutImage}
-                width={2464}
-                height={2464}
-                priority={true}
+                width={1000}
+                height={1000}
+                priority
                 quality={100}
                 alt="Sunil's about image"
                 className="-mb-10 h-64 w-64 sm:drop-shadow-[0_0px_20px_#ffffff0f] flex-shrink-0 rounded-full object-cover text-[#ffffff5d] transition duration-700  ease-in-out hover:scale-125 hover:drop-shadow-[0_0px_35px_#ffffff2f] md:mb-0 md:h-96 md:w-96 md:rounded-lg xl:scale-110"
               />
 
-              
               {/* hover image */}
               <Image
                 src={props.data.aboutHoverImage}
                 width={2464}
                 height={2464}
-                priority={true}
+                priority
                 quality={100}
                 alt="Sunil's about image"
-                className="absolute -mb-10 h-64 w-64 sm:drop-shadow-[0_0px_20px_#ffffff0f] flex-shrink-0 rounded-full object-cover text-[#ffffff5d] transition duration-700  ease-in-out hover:scale-125 hover:drop-shadow-[0_0px_35px_#ffffff2f] md:mb-0 md:h-96 md:w-96 md:rounded-lg xl:scale-110"
+                className="absolute -mb-10  h-64 w-64 sm:drop-shadow-[0_0px_20px_#ffffff0f] flex-shrink-0 rounded-full object-cover text-[#ffffff5d] transition duration-700  ease-in-out hover:scale-125 hover:drop-shadow-[0_0px_35px_#ffffff2f] md:mb-0 md:h-96 md:w-96 md:rounded-lg xl:scale-110"
               />
             </motion.div>
           </motion.div>
         </motion.div>
 
-        <div className="space-y-6 px-0 md:px-3 flex items-center ">
+        <div className={`space-y-6 px-0 md:px-3 flex items-center`}>
           {/* <h4 className="text-2xl font-semibold text-[#F7AB0A] sm:text-4xl xl:mt-20">{`Here's Something `}</h4> */}
           <motion.p
             initial={{
@@ -102,6 +101,7 @@ const About = (props: Props) => {
               duration: 1,
             }}
             className="text-justify text-sm font-bold  antialiased sm:text-base sm:font-normal md:max-w-xl md:text-base  md:leading-7 xl:text-xl  xl:leading-8 pb-4 sm:mt-32 relative"
+            
           >
             {/* upper quote */}
             <Image

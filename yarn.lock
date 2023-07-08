@@ -440,6 +440,11 @@
   resolved "https://registry.npmjs.org/@types/scheduler/-/scheduler-0.16.2.tgz"
   integrity sha512-hppQEBDmlwhFAXKJX2KnWLYu5yMfi91yazPb2l+lbJiwW+wdo1gNeRA+3RgNSO39WYX2euey41KEwnqesU2Jew==
 
+"@types/splitting@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.npmjs.org/@types/splitting/-/splitting-1.0.1.tgz"
+  integrity sha512-YE4KTZpJbDDUm0jCpx9YGlAxk6ksh/LffSTNKkiKb7xEUfW2biyGWHF7ScgT5H+HfLS2yb1VAGARYeRHcFDYXA==
+
 "@typescript-eslint/parser@^5.42.0":
   version "5.52.0"
   resolved "https://registry.npmjs.org/@typescript-eslint/parser/-/parser-5.52.0.tgz"
@@ -483,6 +488,11 @@
   dependencies:
     "@typescript-eslint/types" "5.52.0"
     eslint-visitor-keys "^3.3.0"
+
+"@vercel/analytics@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.npmjs.org/@vercel/analytics/-/analytics-1.0.1.tgz"
+  integrity sha512-Ux0c9qUfkcPqng3vrR0GTrlQdqNJ2JREn/2ydrVuKwM3RtMfF2mWX31Ijqo1opSjNAq6rK76PwtANw6kl6TAow==
 
 acorn-jsx@^5.3.2:
   version "5.3.2"
