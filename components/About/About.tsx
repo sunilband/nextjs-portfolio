@@ -99,6 +99,7 @@ const About = (props: Props) => {
               width={35}
               height={35}
               className="absolute top-[-60px] left-[-10px] fill-inherit"
+              priority
             />
             {/* lower quote */}
             <Image
@@ -107,6 +108,7 @@ const About = (props: Props) => {
               width={35}
               height={35}
               className="absolute bottom-[-40px] right-[-10px] rotate-180"
+              priority
             />
 
             {props.data.aboutText.split(" ").map((word: any, key: any) => {
