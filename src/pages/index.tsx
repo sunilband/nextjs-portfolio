@@ -32,7 +32,7 @@ export default function Home(props: Props) {
   const data = props.data;
 
   return (
-    <div className="bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory overflow-x-hidden overflow-y-scroll z-0 sm:scrollbar-thin sm:scrollbar-thumb-[#F7AB0A]/80 sm:scrollbar-track-gray-500  sm:scrollbar-thumb-rounded-full sm:scrollbar-track-rounded-full">
+    <div className="bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory overflow-x-hidden overflow-y-scroll z-0 sm:scrollbar-thin sm:scrollbar-thumb-[#F7AB0A]/80 sm:scrollbar-transparent sm:scrollbar-thumb-rounded-full sm:scrollbar-track-rounded-full">
       <Head>
         <title>{`Sunil's Portfolio`}</title>
       </Head>
