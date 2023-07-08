@@ -2,6 +2,7 @@ import React from "react";
 import { motion, useMotionValue, useTransform } from "framer-motion";
 import Image from "next/image";
 import classes from "./About.module.css";
+import quote from "./quote.svg";
 
 type Props = {
   data: any;
@@ -89,8 +90,25 @@ const About = (props: Props) => {
             transition={{
               duration: 1,
             }}
-            className="text-justify text-sm font-bold  antialiased sm:text-base sm:font-normal md:max-w-xl md:text-base  md:leading-7 xl:text-xl  xl:leading-8 pb-4 sm:mt-32"
+            className="text-justify text-sm font-bold  antialiased sm:text-base sm:font-normal md:max-w-xl md:text-base  md:leading-7 xl:text-xl  xl:leading-8 pb-4 sm:mt-32 relative"
           >
+            {/* upper quote */}
+            <Image
+              src={quote}
+              alt="open quote"
+              width={35}
+              height={35}
+              className="absolute top-[-60px] left-[-10px] fill-inherit"
+            />
+            {/* lower quote */}
+            <Image
+              src={quote}
+              alt="open quote"
+              width={35}
+              height={35}
+              className="absolute bottom-[-40px] right-[-10px] rotate-180"
+            />
+
             {props.data.aboutText.split(" ").map((word: any, key: any) => {
               return (
                 <span

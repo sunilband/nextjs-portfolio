@@ -64,7 +64,7 @@ const Projects = (props: Props) => {
                       quality={100}
                     />
                     <div className="space-y-10 px-4 md:px-10 max-w-3xl text-center">
-                      <h4 className="text-4xl font-semibold tracking-wide flex flex-col cursor-default text-[#F7AB0A]">
+                      <h4 className="text-4xl font-semibold tracking-wide flex flex-col cursor-default text-[#F7AB0A]/70">
                         {item.projectName}
                       </h4>
                       <p className="text-lg text-justify cursor-default">
