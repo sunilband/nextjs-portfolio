@@ -64,7 +64,7 @@ function Skills(props: Props) {
       </h3>
       <div className="  w-[90vw] h-[60vh] md:w-[40vw] flex justify-center items-center z-20">
         <div className="container">
-          <ul>
+          <ul className="scale-[70%] md:scale-100">
             {props.data.skillData.map((item: any, key: any) => {
               return (
                 <motion.li
