@@ -28,7 +28,7 @@ li {
   left: 0;
   border-radius: 4px;
   pointer-events: none;
-  background-color: white;
+  background-color: rgba(43, 42, 42, 0.879);
   border-radius: 5px;
 }
 
