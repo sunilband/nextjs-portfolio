@@ -13,9 +13,9 @@
 
 /* css for skills */
 /* the important bits */
+
 li {
   perspective: 200px;
-  
 }
 
 .info {
@@ -28,9 +28,8 @@ li {
   left: 0;
   border-radius: 4px;
   pointer-events: none;
-  background-color: rgba(219, 160, 34, 0.904);
-  border-radius: 10px;
-
+  background-color: rgb(219, 160, 34);
+  border-radius: 5px;
 }
 
 .in-top .info {
@@ -210,9 +209,13 @@ li {
     transform: rotate3d(0, 1, 0, 104deg);
   }
 }
-/* you can ignore this ones */
+
 ul {
   padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 ul:after {
   content: "";
@@ -237,7 +240,7 @@ li a {
 }
 li h3 {
   font-size: 4rem;
-  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   text-align: center;
   color: rgba(255, 255, 255, 0.9);
 }
@@ -255,14 +258,13 @@ li .normal {
   text-align: center;
   font-size: 50px;
   line-height: 200px;
-  border-radius: 10px;
+  border-radius: 6px;
 }
 li .normal img {
   pointer-events: none;
   width: 50px;
-  border-radius: 10px;
+  border-radius: 5px;
   object-fit: cover;
-
 }
 li .normal svg path {
   fill: rgba(52, 73, 94, 0.2);

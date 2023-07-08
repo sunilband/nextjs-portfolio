@@ -11,9 +11,8 @@ import "swiper/css/pagination";
 import { EffectCoverflow, Pagination, EffectCards } from "swiper";
 import CertCard from "./CertCard";
 
-
 type Props = {
-  data:any
+  data: any;
 };
 
 const Certifications = (props: Props) => {
@@ -47,7 +46,7 @@ const Certifications = (props: Props) => {
           style={{ paddingTop: "10px", paddingBottom: "35px" }}
         >
           {/* Swiper items */}
-          {props.data.certData.map((item: any, i: number) => {
+          {props.data.certData.map((item: any, key: number) => {
             return (
               <SwiperSlide
                 style={{
@@ -55,7 +54,7 @@ const Certifications = (props: Props) => {
                   backgroundPosition: "center",
                   backgroundSize: "cover",
                 }}
-                key={i}
+                key={key}
               >
                 <CertCard
                   name={item.name}
@@ -66,7 +65,6 @@ const Certifications = (props: Props) => {
                   status={item.status}
                   learnPoints={item.learnPoints}
                 />
-                
               </SwiperSlide>
             );
           })}

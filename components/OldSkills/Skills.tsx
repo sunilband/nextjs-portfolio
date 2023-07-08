@@ -1,10 +1,10 @@
 import React from "react";
 import { useState } from "react";
 import Skill from "./Skill-Element";
-import {motion } from "framer-motion";
+import { motion } from "framer-motion";
 
 type Props = {
-  data:any
+  data: any;
 };
 
 function Skills(props: Props) {
@@ -35,27 +35,22 @@ function Skills(props: Props) {
         viewport={{ once: true }}
         className="grid grid-cols-4 sm:grid-cols-5 gap-4 content-start z-20"
       >
-        {props.data.skillData.map((item:any,key:any)=>{
-          return<div
-          onMouseEnter={() => {
-            setSkill(item.skillName);
-          }}
-          onMouseLeave={() => {
-            setSkill("");
-          }}
-          key={key}
-        >
-          {/* js */}
-          <Skill
-            source={item.imageLink}
-            proficiency={item.proficiency}
-          />
-        </div>
+        {props.data.skillData.map((item: any, key: any) => {
+          return (
+            <div
+              onMouseEnter={() => {
+                setSkill(item.skillName);
+              }}
+              onMouseLeave={() => {
+                setSkill("");
+              }}
+              key={key}
+            >
+              {/* js */}
+              <Skill source={item.imageLink} proficiency={item.proficiency} />
+            </div>
+          );
         })}
-        
-
-        
-        
       </motion.div>
 
       <div className="w-full absolute top-[30%] bg-[#F7AB0A]/10 left-0 h-[500px] skew-y-12 flex items-end justify-start xl:items-start  xl:justify-end ">

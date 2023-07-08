@@ -1,18 +1,13 @@
 import React from "react";
 import { motion, useMotionValue, useTransform } from "framer-motion";
 import Image from "next/image";
-
-
-
+import classes from "./About.module.css";
 
 type Props = {
-data:any
+  data: any;
 };
 
 const About = (props: Props) => {
-  
-
- 
   const x = useMotionValue(100);
   const y = useMotionValue(100);
 
@@ -33,28 +28,14 @@ const About = (props: Props) => {
   return (
     // test
     <div className="w-screen h-screen ">
-      <motion.div
-        initial={{
-          opacity: 0,
-        }}
-        whileInView={{
-          opacity: 1,
-          scale: [0.5, 1.1, 1],
-        }}
-        transition={{
-          type: "spring",
-          duration: 1.5,
-        }}
-        viewport={{ once: true }}
-        className="flex flex-col relative h-screen text-center md:text-left md:flex-row  px-10 justify-center gap-20 mx-auto items-center z-20 "
-      >
+      <div className="flex flex-col relative h-screen text-center md:text-left md:flex-row  px-10 justify-center gap-20 mx-auto items-center z-20 ">
         <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl ">
           About
         </h3>
 
         <motion.div
           initial={{
-            y: -200,
+            y: 100,
             opacity: 0,
           }}
           whileInView={{
@@ -64,7 +45,6 @@ const About = (props: Props) => {
           transition={{
             duration: 1,
           }}
-          viewport={{ once: true }}
         >
           <motion.div
             style={{
@@ -84,7 +64,6 @@ const About = (props: Props) => {
               className="mt-28 flex h-60 w-64 items-start justify-center md:h-96 md:w-96"
             >
               <Image
-  
                 src={props.data.aboutImage}
                 width={2464}
                 height={2464}
@@ -97,27 +76,34 @@ const About = (props: Props) => {
           </motion.div>
         </motion.div>
 
-        <motion.div
-          initial={{
-            opacity: 0,
-          }}
-          whileInView={{
-            opacity: 1,
-            scale: [0.5, 1.1, 1],
-          }}
-          transition={{
-            type: "spring",
-            duration: 2,
-          }}
-          viewport={{ once: true }}
-          className="space-y-6 px-0 md:px-3 flex items-center "
-        >
+        <div className="space-y-6 px-0 md:px-3 flex items-center ">
           {/* <h4 className="text-2xl font-semibold text-[#F7AB0A] sm:text-4xl xl:mt-20">{`Here's Something `}</h4> */}
-          <p className="text-justify text-sm font-bold  antialiased sm:text-base sm:font-normal md:max-w-xl md:text-base  md:leading-7 xl:text-xl  xl:leading-8 pb-4 sm:mt-32">
-            {props.data.aboutText.split(" ").map((x:any,key:any)=>{return<span className="hover:text-[#F7AB0A] transition-all ease-in-out hover:scale-105" key={key}>{x} </span>})}
-          </p>
-        </motion.div>
-      </motion.div>
+          <motion.p
+            initial={{
+              x: 100,
+            }}
+            whileInView={{
+              y: 0,
+              x: 0,
+            }}
+            transition={{
+              duration: 1,
+            }}
+            className="text-justify text-sm font-bold  antialiased sm:text-base sm:font-normal md:max-w-xl md:text-base  md:leading-7 xl:text-xl  xl:leading-8 pb-4 sm:mt-32"
+          >
+            {props.data.aboutText.split(" ").map((word: any, key: any) => {
+              return (
+                <span
+                  className="hover:text-[#F7AB0A] transition-all ease-in-out hover:scale-105 tracking-wide"
+                  key={key}
+                >
+                  {word}{" "}
+                </span>
+              );
+            })}
+          </motion.p>
+        </div>
+      </div>
     </div>
   );
 };

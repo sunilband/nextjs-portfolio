@@ -1,13 +1,12 @@
 // @ts-nocheck
 
 import React from "react";
-import { useState,useEffect } from "react";
-import Skill from "../Skill-Element";
-import {motion } from "framer-motion";
+import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 import Image from "next/image";
 
 type Props = {
-  data:any
+  data: any;
 };
 
 function Skills(props: Props) {
@@ -35,11 +34,11 @@ function Skills(props: Props) {
         this.element = element;
 
         this.element.addEventListener("mouseover", (ev) =>
-          this.update(ev, "in")
+          this.update(ev, "in"),
         );
 
         this.element.addEventListener("mouseout", (ev) =>
-          this.update(ev, "out")
+          this.update(ev, "out"),
         );
       }
 
@@ -47,7 +46,7 @@ function Skills(props: Props) {
         this.element.classList.remove(...classNames);
 
         this.element.classList.add(
-          `${prefix}-${directions[getDirectionKey(ev, this.element)]}`
+          `${prefix}-${directions[getDirectionKey(ev, this.element)]}`,
         );
       }
     }
@@ -63,58 +62,46 @@ function Skills(props: Props) {
       <h3 className="absolute top-36 uppercase tracking-[3px] text-gray-500 text-sm cursor-default ">
         hover for current proficiency{" "}
       </h3>
-      <motion.div
-        initial={{
-          y: 200,
-          x: -200,
-        }}
-        whileInView={{
-          y: 0,
-          x: 0,
-        }}
-        transition={{
-          type: "spring",
-          duration: 2,
-        }}
-        viewport={{ once: true }}
-        className=" ml-10 w-[90vw] h-[60vh] md:w-[40vw] flex justify-center items-center z-20"
-
-      >
-        
-      
+      <div className="  w-[90vw] h-[60vh] md:w-[40vw] flex justify-center items-center z-20">
         <div className="container">
-          <ul >
-        {
-          props.data.skillData.map((item:any,key:any)=>{
-            return(
-        <li key={key} className="rounded-lg antialiased"
-        onMouseEnter={() => {
-          setSkill(item.skillName);
-        }}
-        onMouseLeave={() => {
-          setSkill("");
-        }}>
-          <a className="normal rounded-lg overflow-hidden antialiased" href="#">
-            <Image src={item.imageLink} alt="image" fill/>
-          </a>
-          <div className="info antialiased flex justify-center items-center">
-            <h3>{item.proficiency}</h3>
-          </div>
-        </li>
-            )
-        }
-        )
-      }
-      </ul>
+          <ul>
+            {props.data.skillData.map((item: any, key: any) => {
+              return (
+                <motion.li
+                  key={key}
+                  className="rounded-lg antialiased self-center"
+                  onMouseEnter={() => {
+                    setSkill(item.skillName);
+                  }}
+                  onMouseLeave={() => {
+                    setSkill("");
+                  }}
+                  initial={{
+                    x: key % 2 == 0 ? 100 : -100,
+                  }}
+                  whileInView={{
+                    y: 0,
+                    x: 0,
+                  }}
+                  transition={{
+                    duration: 1,
+                  }}
+                >
+                  <a
+                    className="normal rounded-lg overflow-hidden antialiased"
+                    href="#"
+                  >
+                    <Image src={item.imageLink} alt="image" fill />
+                  </a>
+                  <div className="info antialiased flex justify-center items-center">
+                    <h3>{item.proficiency}</h3>
+                  </div>
+                </motion.li>
+              );
+            })}
+          </ul>
+        </div>
       </div>
-        
-        
-          
-        
-
-        
-        
-      </motion.div>
 
       <div className="w-full absolute top-[30%] bg-[#F7AB0A]/10 left-0 h-[500px] skew-y-12 flex items-end justify-start xl:items-start  xl:justify-end ">
         <h3 className="w-[35vw] sm:w-[32vw] h-fit text-xl md:text-[7vh] md:text-5xl text-gray-500/50 uppercase p-4 pt-11 pb-6 tracking-[20px]  transition-all ease-in-out duration-150 animate-[bounce_2s_ease-in-out_infinite]">
