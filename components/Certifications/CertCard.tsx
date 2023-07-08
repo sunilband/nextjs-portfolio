@@ -18,39 +18,36 @@ const CertCard = (props: Props) => {
 
   return (
     <Link href={props.link ? props.link : ""} passHref target="_blank">
-      
-      <motion.article 
+      <motion.article
         initial={{
-          x:200,
-          y:200,
+          x: 100,
+          y: 100,
           opacity: 0,
         }}
         transition={{
-          type: "spring",
-          duration: 2,
+          duration: 1,
         }}
         whileInView={{
           opacity: 1,
-          y:0,
+          y: 0,
           x: 0,
         }}
-        viewport={{ once: true }}
-      className="group antialiased flex flex-col rounded-lg items-center space-y-7 flex-shrink-0 flex-grow-0 sm:w-96 p-10 md:p-2 bg-[#292929] w-fit  max-h-[80vh] min-h-[75vh] cursor-default ">
+        // viewport={{ once: true }}
+        className="group antialiased flex flex-col rounded-lg items-center space-y-7 flex-shrink-0 flex-grow-0 sm:w-96 p-10 md:p-2 bg-[#292929] w-fit  max-h-[80vh] min-h-[75vh] cursor-default "
+      >
         {/* compony logo */}
         <motion.div
-        initial={{
-          x: -50,
-          opacity: 0,
-        }}
-        transition={{
-          type: "spring",
-          duration: 3,
-        }}
-        whileInView={{
-          opacity: 1,
-          x: 0,
-        }}
-        viewport={{ once: true }}
+          initial={{
+            x: -50,
+            opacity: 0,
+          }}
+          transition={{
+            duration: 1,
+          }}
+          whileInView={{
+            opacity: 1,
+            x: 0,
+          }}
         >
           <Image
             src={props.logo}
@@ -106,7 +103,6 @@ const CertCard = (props: Props) => {
           </div>
         </div>
       </motion.article>
-      
     </Link>
   );
 };
