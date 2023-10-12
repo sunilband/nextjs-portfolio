@@ -15,6 +15,7 @@ function Skills(props: Props) {
 
   useEffect(() => {
     const nodes = [].slice.call(document.querySelectorAll("li"), 0);
+
     const directions = { 0: "top", 1: "right", 2: "bottom", 3: "left" };
     const classNames = ["in", "out"]
       .map((p) => Object.values(directions).map((d) => `${p}-${d}`))
@@ -60,11 +61,11 @@ function Skills(props: Props) {
         Skills
       </h3>
       <h3 className="absolute top-36 uppercase tracking-[3px] text-gray-500 text-sm cursor-default ">
-        hover for current proficiency{" "}
+        hover for proficiency
       </h3>
       <div className="  w-[90vw] h-[60vh] md:w-[40vw] flex justify-center items-center z-20">
-        <div className="container">
-          <ul className="scale-[70%] md:scale-100">
+        <div className={`container `}>
+          <ul className={`scale-[70%] md:scale-100 `}>
             {props.data.skillData.map((item: any, key: any) => {
               return (
                 <motion.li

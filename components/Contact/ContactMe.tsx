@@ -19,7 +19,10 @@ const ContactMe = (props: Props) => {
       )
       .then(
         (result) => {
-          toast.success("Email Sent Successfully");
+          form.current;
+          toast.success(
+            "Thank you for contacting me! I will get back to you soon 👋",
+          );
         },
         (error) => {
           toast.error("Something went wrong");

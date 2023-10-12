@@ -10,6 +10,7 @@ import Certifications from "components/Certifications/Certifications";
 import axios from "axios";
 import React from "react";
 import SkillsSection from "components/SkillsSection/SkillsSection";
+import Carousel from "components/Carousel/Carousel";
 // import { InfinitySpin } from "react-loader-spinner";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -32,9 +33,10 @@ export default function Home(props: Props) {
   const data = props.data;
 
   return (
+ 
     <div className="bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory overflow-x-hidden overflow-y-scroll z-0 sm:scrollbar-thin sm:scrollbar-thumb-[#F7AB0A]/80 sm:scrollbar-transparent sm:scrollbar-thumb-rounded-full sm:scrollbar-track-rounded-full">
       <Head>
-        <title>{`Sunil's Portfolio`}</title>
+        <title>{`Sunil Band`}</title>
       </Head>
       {/* Header */}
       <Header data={props.data[5]} />
@@ -74,9 +76,15 @@ export default function Home(props: Props) {
         <SkillsSection data={props.data[3]} />
       </section>
 
-      {/* Projects */}
-      <section id="projects" className="snap-start snap-mandatory  snap-always">
+      {/* Projects old*/}
+      {/* <section id="projects" className="snap-start snap-mandatory  snap-always">
         <Projects data={props.data[4]} />
+      </section> */}
+
+       {/* Projects new */}
+       <section id="projects" className="snap-start snap-mandatory  snap-always">
+        <Carousel data={props.data[4]}/>
+        {/* <Projects data={props.data[4]} /> */}
       </section>
 
       {/* Contact Me */}

@@ -33,7 +33,7 @@ const CertCard = (props: Props) => {
           x: 0,
         }}
         // viewport={{ once: true }}
-        className="group antialiased flex flex-col rounded-lg items-center space-y-7 flex-shrink-0 flex-grow-0 sm:w-96 p-10 md:p-2 bg-[#292929] w-fit  max-h-[80vh] min-h-[75vh] cursor-default "
+        className="group antialiased flex flex-col rounded-lg items-center space-y-7 flex-shrink-0 flex-grow-0 sm:w-96 p-10 md:p-2 bg-[#292929] w-fit  max-h-[650px] min-h-[550px] cursor-default"
       >
         {/* compony logo */}
         <motion.div
