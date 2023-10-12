@@ -150,7 +150,6 @@ const Carousel = (props: Props) => {
 
   }
   }, [isInView]);
-  console.log(isInView)
 
   return (
     <div
