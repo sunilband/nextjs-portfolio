@@ -1,9 +1,7 @@
 import React from "react";
-import { useState, useEffect } from "react";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 import BackgroundCircles from "./BackgroundCircles";
 import Image from "next/image";
-import myPic from "../assets/mugshot.jpeg";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
@@ -52,7 +50,7 @@ const Hero = (props: Props) => {
           height={400}
           priority={true}
           alt="Sunil's Pic"
-          className="relative rounded-full h-40 w-40 mx-auto object-cover z-20 border-4"
+          className={`relative rounded-full h-40 w-40 mx-auto object-cover z-20 border-4`}
         />
         <h2 className="text-sm uppercase text-gray-500 pb-2 tracking-[15px] z-20 cursor-default ">
           {props.data.title}

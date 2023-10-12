@@ -101,7 +101,6 @@ const About = (props: Props) => {
               duration: 1,
             }}
             className="text-justify text-sm font-bold  antialiased sm:text-base sm:font-normal md:max-w-xl md:text-base  md:leading-7 xl:text-xl  xl:leading-8 pb-4 sm:mt-32 relative"
-            
           >
             {/* upper quote */}
             <Image

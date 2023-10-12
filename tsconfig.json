@@ -23,7 +23,8 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    "components/Header/Header.tsx"
+    "components/Header/Header.tsx",
+    "components/About/CodeBlock/CodeBlock.jsx"
   ],
   "exclude": ["node_modules"]
 }

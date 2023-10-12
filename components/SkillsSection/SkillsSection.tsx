@@ -35,11 +35,11 @@ function Skills(props: Props) {
         this.element = element;
 
         this.element.addEventListener("mouseover", (ev) =>
-          this.update(ev, "in")
+          this.update(ev, "in"),
         );
 
         this.element.addEventListener("mouseout", (ev) =>
-          this.update(ev, "out")
+          this.update(ev, "out"),
         );
       }
 
@@ -47,7 +47,7 @@ function Skills(props: Props) {
         this.element.classList.remove(...classNames);
 
         this.element.classList.add(
-          `${prefix}-${directions[getDirectionKey(ev, this.element)]}`
+          `${prefix}-${directions[getDirectionKey(ev, this.element)]}`,
         );
       }
     }
