@@ -71,7 +71,7 @@
   /* -webkit-transform: translate(0%, -30%) rotateX(360deg) rotateY(90deg);
   transform: translate(30%, -25%) rotateX(360deg) rotateY(90deg);
   text-align: center; */
-margin-left: 10px;
+  margin-left: 10px;
   text-align: center;
 }
 
@@ -138,3 +138,4 @@ margin-left: 10px;
     transform: rotateY(0deg);
   }
 }
+
