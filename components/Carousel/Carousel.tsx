@@ -21,17 +21,12 @@ const Carousel = (props: Props) => {
 
   const ref = useRef(null);
   const isInView = useInView(ref);
-  console.log(isInView);
 
   useEffect(() => {
-    // Author: Hoang Tran (https://fb.com/99.hoangtran)
 
-    // Github verson (1 file .html): https://github.com/HoangTran0410/3DCarousel/blob/master/index.html
+    if(isInView){
 
-    // Give me a coffee <3 https://github.com/HoangTran0410/HoangTran0410/blob/main/DONATE.md
-
-    // You can change global variables here:
-    var radius = 250; // how big of the radius
+    var radius = 300; // how big of the radius
     var autoRotate = true; // auto rotate or not
     var rotateSpeed = -10; // unit: seconds/360 degrees
     var imgWidth = 300; // width of images (unit: px)
@@ -152,7 +147,10 @@ const Carousel = (props: Props) => {
 
       return false;
     };
+
+  }
   }, [isInView]);
+  console.log(isInView)
 
   return (
     <div
@@ -162,7 +160,7 @@ const Carousel = (props: Props) => {
       <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl cursor-default ">
         Projects
       </h3>
-      <h3 className="absolute top-36 uppercase tracking-[3px] text-gray-500 text-sm cursor-default ">
+      <h3  className="absolute top-36 uppercase tracking-[3px] text-gray-500 text-sm cursor-default ">
         Drag to explore
       </h3>
 
@@ -187,7 +185,7 @@ const Carousel = (props: Props) => {
           ) : null}
         </div>
 
-        <div
+        {isInView?<div
           id="drag-container"
           className={`${classes.dragContainer} lg:absolute lg:-right-40 top-20 lg:top-auto scale-75 lg:scale-100`}
         >
@@ -221,9 +219,8 @@ const Carousel = (props: Props) => {
               );
             })}
           </div>
-
           <div id="ground" className={classes.ground} />
-        </div>
+        </div>:null}
       </>
     </div>
   );
