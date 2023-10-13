@@ -3,6 +3,7 @@
 import React from "react";
 import { useEffect, useState, useRef } from "react";
 import classes from "./Carousel.module.css";
+// import "./Carousel.module.css"
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
@@ -19,6 +20,7 @@ const Carousel = (props: Props) => {
   const [duration, setDuration] = useState("");
   const [link, setLink] = useState("");
 
+
   const ref = useRef(null);
   const isInView = useInView(ref);
 
@@ -28,7 +30,7 @@ const Carousel = (props: Props) => {
 
     var radius = 300; // how big of the radius
     var autoRotate = true; // auto rotate or not
-    var rotateSpeed = -10; // unit: seconds/360 degrees
+    var rotateSpeed = 20; // unit: seconds/360 degrees
     var imgWidth = 300; // width of images (unit: px)
     var imgHeight = 200; // height of images (unit: px)
 
@@ -37,17 +39,9 @@ const Carousel = (props: Props) => {
       "https://api.soundcloud.com/tracks/143041228/stream?client_id=587aa2d384f7333a886010d5f52f302a";
     var bgMusicControls = true; // Show UI music control
 
-    /*
-     NOTE:
-       + imgWidth, imgHeight will work for video
-       + if imgWidth, imgHeight too small, play/pause button in <video> will be hidden
-       + Music link are taken from: https://hoangtran0410.github.io/Visualyze-design-your-own-/?theme=HauMaster&playlist=1&song=1&background=28
-       + Custom from code in tiktok video  https://www.facebook.com/J2TEAM.ManhTuan/videos/1353367338135935/
-*/
-
-    // ===================== start =======================
+   
     // animation start after 1000 miliseconds
-    setTimeout(init, 1000);
+    setTimeout(init, 200);
 
     var odrag = document.getElementById("drag-container");
     var ospin = document.getElementById("spin-container");
@@ -75,12 +69,15 @@ const Carousel = (props: Props) => {
           "px)";
         aEle[i].style.transition = "transform 1s";
         aEle[i].style.transitionDelay =
-          delayTime || (aEle.length - i) / 4 + "s";
+        // adjust the number to set the duration of initial animation
+          delayTime || (aEle.length - i) / 8 + "s";
       }
+  
     }
 
     function applyTranform(obj) {
       // Constrain the angle of camera (between 0 and 180)
+      
       if (tY > 30) tY = 30;
       if (tY < 5) tY = 5;
 
@@ -103,7 +100,7 @@ const Carousel = (props: Props) => {
 
     // auto spin
     if (autoRotate) {
-      var animationName = rotateSpeed > 0 ? "spin" : "spinRevert";
+      var animationName = rotateSpeed > 0 ? `${classes.spin}`: `${classes.spinRevert}`;
       ospin.style.animation = `${animationName} ${Math.abs(
         rotateSpeed
       )}s infinite linear`;
@@ -147,7 +144,7 @@ const Carousel = (props: Props) => {
 
       return false;
     };
-
+   
   }
   }, [isInView]);
 
@@ -190,7 +187,7 @@ const Carousel = (props: Props) => {
         >
           <div
             id="spin-container"
-            className={`${classes.spinContainer} `}
+            className={`${classes.spinContainer}`}
           >
             {/* Add your images (or video) here */}
             {props.data.projectsData.map((item, index) => {
