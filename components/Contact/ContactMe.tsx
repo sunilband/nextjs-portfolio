@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef ,useState} from "react";
 import { PhoneIcon, MapPinIcon, EnvelopeIcon } from "@heroicons/react/24/solid";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
@@ -7,6 +7,12 @@ import { toast } from "react-toastify";
 type Props = {};
 
 const ContactMe = (props: Props) => {
+  const [formData,setFormData] = useState({
+    name:"",
+    email:"",
+    subject:"",
+    message:""
+  })
   const form: any = useRef();
   const sendEmail = (e: any) => {
     e.preventDefault();
@@ -19,15 +25,21 @@ const ContactMe = (props: Props) => {
       )
       .then(
         (result) => {
-          form.current;
-          toast.success(
-            "Thank you for contacting me! I will get back to you soon 👋",
-          );
+          form.current
+          toast.success("Thank you for contacting me! I will get back to you soon 👋");
         },
         (error) => {
           toast.error("Something went wrong");
         },
       );
+  };
+
+  const nameInputRef: any = useRef();
+  const emailInputRef: any = useRef();
+  const subjectInputRef: any = useRef();
+  const messageInputRef: any = useRef();
+  const focusInput = (inputRef: any) => {
+    inputRef.current.focus();
   };
 
   return (
@@ -83,6 +95,9 @@ const ContactMe = (props: Props) => {
               style={{ width: "50%" }}
               name="name"
               required
+              ref={nameInputRef}
+              onClick={() => focusInput(nameInputRef)}
+             
             />
             <input
               placeholder="Email"
@@ -91,6 +106,8 @@ const ContactMe = (props: Props) => {
               style={{ width: "50%" }}
               name="email"
               required
+              ref={emailInputRef}
+              onClick={() => focusInput(emailInputRef)}
             />
           </motion.div>
           <motion.input
@@ -110,6 +127,8 @@ const ContactMe = (props: Props) => {
             type="text"
             name="subject"
             required
+            ref={subjectInputRef}
+            onClick={() => focusInput(subjectInputRef)}
           />
           <motion.textarea
             initial={{
@@ -127,6 +146,8 @@ const ContactMe = (props: Props) => {
             className="contactInput"
             name="message"
             required
+            ref={messageInputRef}
+            onClick={() => focusInput(messageInputRef)}
           />
           <motion.button
             initial={{
