@@ -211,6 +211,7 @@ const Carousel = (props: Props) => {
                   // }}
                   onDoubleClick={() => window.open(item.projectLink, "_blank")}
                   className={`${classes.project} cursor-pointer rounded-lg`}
+                  priority={true}
                 />
               );
             })}
