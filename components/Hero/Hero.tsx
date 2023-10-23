@@ -4,6 +4,7 @@ import BackgroundCircles from "./BackgroundCircles";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import mugshot from "../../assets/mugshot.png";
 
 type Props = {
   data: any;
@@ -75,7 +76,7 @@ const Hero = (props: Props) => {
             <Link href="#projects">
               <button className="heroButton">Projects</button>
             </Link>
-            <Link href="https://sunilresume.vercel.app/">
+            <Link href="https://sunilresume.vercel.app/" target="_blank">
               <button className="heroButton">Resume</button>
             </Link>
           </div>
